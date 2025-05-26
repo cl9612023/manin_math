@@ -10,5 +10,6 @@ class Polygon(Scene):
     def construct(self):
         self.camera.background_color = WHITE #背景顏色
         pentagon = RegularPolygon(n=5) #五邊形
+        pentagon.set_stroke(BLACK,width=5)
         self.play(Create(pentagon))
         self.wait(1)
