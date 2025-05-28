@@ -12,5 +12,8 @@ class Polygon(Scene):
         pentagon = RegularPolygon(n=5) #五邊形
         pentagon.set_stroke(BLACK,width=5)
         pentagon.set_fill(YELLOW,opacity=1)
+        vertices  = pentagon.get_vertices()
+        point_1 = Dot(point=vertices[0], color=BLACK)
         self.play(Create(pentagon))
+        self.add(point_1)
         self.wait(1)
